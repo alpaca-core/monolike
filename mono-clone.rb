@@ -14,6 +14,4 @@ end
 
 subprojects = File.readlines('subprojects.txt').map { _1.split.first }.reject(&:empty?)
 
-p subprojects
-
-# subprojects.each { clone_subproject(_1) }
+subprojects.each { clone_subproject(_1) }
