@@ -1,6 +1,7 @@
 *
 !.gitignore
 !subprojects.yml
+!subprojects.txt
 !mono*
 !LICENSE
 !README.md

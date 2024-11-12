@@ -1,8 +1,6 @@
 # Copyright (c) Alpaca Core
 # SPDX-License-Identifier: MIT
 #
-require 'yaml'
-
 def clone_subproject(sp)
   dir = File.basename(sp)
   if File.directory?(dir)
@@ -14,12 +12,8 @@ def clone_subproject(sp)
   `git clone #{sp} --recurse-submodules`
 end
 
-subprojects = YAML.load_file('subprojects.yml').map { |sp|
-  next sp if String === sp
+subprojects = File.readlines('subprojects.txt').map { _1.split.first }.reject(&:empty?)
 
-  sp.map { |sup, prjs|
-    prjs.map { "#{sup}/#{_1}" }
-  }
-}.flatten
+p subprojects
 
-subprojects.each { clone_subproject(_1) }
+# subprojects.each { clone_subproject(_1) }

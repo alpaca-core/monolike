@@ -1,0 +1,4 @@
+https://github.com/alpaca-core/ac-build
+https://github.com/alpaca-core/ac-local
+https://github.com/alpaca-core/ilib-foo
+https://github.com/alpaca-core/tpl-ac-local-app
