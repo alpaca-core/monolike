@@ -1,6 +1,6 @@
+# whitelist as we don't want to leak the subprojects in the repo
 *
 !.gitignore
-!subprojects.yml
 !subprojects.txt
 !mono*
 !LICENSE
