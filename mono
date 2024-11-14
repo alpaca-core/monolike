@@ -8,3 +8,5 @@ if ARGV.empty?
 end
 
 cmd = ARGV.shift
+
+system("ruby mono-#{cmd}.rb", *ARGV)
