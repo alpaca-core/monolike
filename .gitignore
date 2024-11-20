@@ -1,7 +1,0 @@
-# whitelist as we don't want to leak the subprojects in the repo
-*
-!.gitignore
-!subprojects.txt
-!mono*
-!LICENSE
-!README.md

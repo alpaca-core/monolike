@@ -12,6 +12,14 @@ def clone_subproject(sp)
   `git clone #{sp} --recurse-submodules`
 end
 
-subprojects = File.readlines('subprojects.txt').map { _1.split.first }.reject(&:empty?)
+if !File.exist?('subprojects.txt')
+  STDERR.puts "subprojects.txt not found"
+  exit 1
+end
+
+subprojects = File.readlines('subprojects.txt')
+  .reject(&:empty?) # empty line
+  .reject { _1.start_with?('#') } # comment
+  .map { _1.split.first } # allow comments after the URL
 
 subprojects.each { clone_subproject(_1) }

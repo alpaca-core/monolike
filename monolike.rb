@@ -1,4 +1,3 @@
-#!/usr/bin/env ruby
 # Copyright (c) Alpaca Core
 # SPDX-License-Identifier: MIT
 #
@@ -9,4 +8,4 @@ end
 
 cmd = ARGV.shift
 
-system("ruby mono-#{cmd}.rb", *ARGV)
+system("ruby #{__dir__}/mono-#{cmd}.rb", *ARGV)

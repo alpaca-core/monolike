@@ -1,20 +1,14 @@
 # Copyright (c) Alpaca Core
 # SPDX-License-Identifier: MIT
 #
-def pull_subproject(sp)
-  dir = File.basename(sp)
-  if !File.directory?(dir)
-    puts "Directory #{dir} doesn't exist, skipping"
-    return
-  end
-
-  puts "Pulling #{sp}"
+def pull_subproject(dir)
+  puts "Pulling #{dir}"
   STDOUT.flush
   Dir.chdir(dir) {
     system('git pull -r')
   }
 end
 
-subprojects = File.readlines('subprojects.txt').map { _1.split.first }.reject(&:empty?)
+subprojects = Dir['*'].select { File.directory?(_1) }
 
 subprojects.each { pull_subproject(_1) }
