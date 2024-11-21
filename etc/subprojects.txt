@@ -3,5 +3,6 @@ https://github.com/alpaca-core/ac-local
 https://github.com/alpaca-core/ilib-foo
 https://github.com/alpaca-core/ilib-llama.cpp
 https://github.com/alpaca-core/ilib-whisper.cpp
+https://github.com/alpaca-core/ilib-sd.cpp.git
 https://github.com/alpaca-core/tpl-ac-local-app
 https://github.com/alpaca-core/ac-local-java
