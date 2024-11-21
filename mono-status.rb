@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: MIT
 #
 def subproject_status(dir)
-  puts "Pulling #{dir}"
+  puts "Status of #{dir}"
   STDOUT.flush
   Dir.chdir(dir) {
     system('git status')

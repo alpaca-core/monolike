@@ -10,7 +10,7 @@ A tool which facilitates the work with multiple repos as if it's a monorepo.
 * Clone monolike inside
 * Copy one of the runners from bin at the directory root (or install it globally)
 * Done one of:
-    * Create `subprojects.txt` at the directory root and run `./mono clone`
+    * Create `subprojects.txt` at the directory root and run `./mono clone` (an example one is provided in `etc/`)
     * Manually clone your subprojects in the directory
 
 ### Usage
